@@ -5,31 +5,34 @@
 
 
 body{
+
   font-family: 'Raleway', sans-serif;
   min-height: 600px;
-  padding: 80px 0;
+  padding: 1px 0;
   background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
   background-color: #a3bded;
   background-repeat: no-repeat;
 
-  display: flex;
+  
 }
 
 .main{
-  margin: auto;
+ 
   width: 90%;
   max-width: 1000px;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.472), rgba(255, 255, 255, 0.365));
   overflow: hidden;
   padding: .7em;
   border-radius: 1em;
-
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
   grid-auto-rows: max-content;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: .6em;
 
-  animation: mostrar 1.5s ease-in-out;
+  animation: mostrar 0.5s ease-in-out;
 }
 
 @keyframes mostrar {
@@ -43,16 +46,26 @@ body{
 }
 
 .main__figure{
-  overflow: hidden;
+  
   border-radius: 1em;
-  background-color: #D798F8;
-  display: flex;
+  background-color: #afd0df00;
+  
 }
 
 .main__img{
+  display: flex;
+  flex-wrap: wrap;
   margin: auto;
-  width: 80%;
-  max-width: 60vw;
+  justify-content: space-around;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: .6em;
+
+  width: 30%;
+  margin-block: 10px;
+ 
+  
+ 
 }
 
 .main__contact{
@@ -67,7 +80,7 @@ body{
 .main__form{
   display: grid;
   justify-items: center;
-  gap: 1.5em;
+  gap: 1.9em;
 }
 
 .main__input{
@@ -84,8 +97,14 @@ body{
   background-color: #DC3F31;
   color: #fff;
   font-weight: 600;
+  cursor: pointer;
 }
-
+.main__input--send:hover{
+  background-color: #31dc6adc;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
 .main__title{
   font-size: 2.3rem;
 }
@@ -116,4 +135,5 @@ body{
 .main__icon{
   width: 30px;
   height: 30px;
+  border-radius: 0.9em;
 }
